@@ -17,7 +17,7 @@ A simple and intuitive movie list application that allows users to manage their 
 
 ## 📸 Demo
 
-> 🔗 [Click here to try the live demo](link-to-your-deployed-app)
+> 🔗 [Click here to try the live demo](https://lovanshgaur.github.io/WatchLog/)
 
 ---
 
