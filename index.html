@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LvPu-WatchLog</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <!-- Movie Watch List Container -->
+    <div class="container">
+        <h1>Movie Watch List</h1>
+        <div id="list" class="movie-list"></div>
+    </div>
+
+    <!-- New Movie Input Section -->
+    <div class="function">
+        <h2>Enter A New Movie To Our Watch List</h2>
+        <div class="fun-content">
+            <input type="text" placeholder="Enter a Movie Name" id="new-movie" />
+            <button onclick="newMovie()" class="fun-btn">Submit</button>
+        </div>
+    </div>
+    <!-- Hamburger Menu -->
+    <div class="hamburger" onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="mobile-menu">
+        <button onclick="openDeleteModal()" class="remove">Remove All</button>
+        <button onclick="toggleTheme()">Toggle Theme</button>
+
+    </div>
+
+    <!-- Status Modal (Watch/Unwatch Movie) -->
+    <div id="statusModal" class="modal">
+        <div class="modal-content">
+            <p id="statusMessage"></p>
+            <button id="statusYes" onclick="confirmWatch()">Yes</button>
+            <button id="statusNo" onclick="closeStatusModal()">No</button>
+        </div>
+    </div>
+
+    <!-- Delete Confirmation Modal (Remove All Movies) -->
+    <div id="deleteModal" class="modal">
+        <div class="modal-content">
+            <p>Are you sure you want to delete all movies?</p>
+            <button onclick="confirmDeleteAll()">Yes, Delete</button>
+            <button onclick="closeDeleteModal()">Cancel</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
