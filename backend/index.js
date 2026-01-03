@@ -5,7 +5,8 @@ import dotenv from 'dotenv';
 // imports
 import { connectDB } from './config/db.js';
 import authRoutes from './routes/auth.routes.js';
-import userRoutes from './routes/user.routes.js'
+import userRoutes from './routes/user.routes.js';
+import movieRoutes from './routes/movie.routes.js'
 
 // init app
 const app = express();
@@ -21,6 +22,7 @@ connectDB();
 //Routes
 app.use("/auth", authRoutes);
 app.use("/user", userRoutes)
+app.use("/movie", movieRoutes)
 
 app.get("/", (req, res) => {
     res.send(`
