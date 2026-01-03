@@ -3,6 +3,7 @@
   "version": "2.0.0",
   "description": "WatchLog is a simple group movie watch list server, where group of friends can keep their movies in a server.",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js"

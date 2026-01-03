@@ -1,30 +1,39 @@
-const express = require("express");
-const dotenv = require("dotenv");
-const cors = require("cors")
-const connectDB = require("./config/db");
-const authRoutes = require("./routes/auth.routes.js")
-const movieRoutes = require("./routes/movie.routes.js")
+import express from 'express';
+import cors from 'cors';
+import dotenv from 'dotenv';
 
+// imports
+import { connectDB } from './config/db.js';
+import authRoutes from './routes/auth.routes.js';
+import userRoutes from './routes/user.routes.js'
 
-dotenv.config();
-connectDB();
+// init app
 const app = express();
-app.use(cors());
 
-
-
+// middleware
 app.use(express.json());
+app.use(cors());
+dotenv.config();
+
+//database connection
+connectDB();
+
+//Routes
+app.use("/auth", authRoutes);
+app.use("/user", userRoutes)
 
 app.get("/", (req, res) => {
-    res.json({ message: "Hello" });
-});
+    res.send(`
+        <div>
+        <h1>WatchLog API running||LovanshGaur</h1>
+        <a href="https://lovansh.me/">Watch Other Works</a>
+        </div>
+        `
+    )
+})
 
-app.use("/auth", authRoutes);
-app.use("/movie", movieRoutes);
-
-
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || '2026';
 
 app.listen(PORT, () => {
-    console.log("Server is running on port " + PORT);
-});
+    console.log(`Server runing on port ${PORT}`)
+})
