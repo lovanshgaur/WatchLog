@@ -1,0 +1,11 @@
+{
+  "name": "server_watchlog_v2",
+  "version": "2.0.0",
+  "description": "WatchLog for cinephiles like me.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lovansh Gaur",
+  "license": "ISC"
+}
