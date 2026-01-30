@@ -7,12 +7,12 @@ const movieSchema = new mongoose.Schema({
         unique: true
     },
     addedBy: {
-        type: mongoose.Schema.Type.ObjectId,
+        type: mongoose.Schema.Types.ObjectId,
         ref: "User",
         required: true
     },
     watchedBy: {
-        type: mongoose.Schema.Type.ObjectId,
+        type: mongoose.Schema.Types.ObjectId,
         ref: "User",
     },
     isPublic: {
